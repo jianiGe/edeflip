@@ -55,6 +55,9 @@ def load_dictionary(path, word2id1, word2id2):
 
     with io.open(path, 'r', encoding='utf-8') as f:
         for index, line in enumerate(f):
+            ## Todo: edit here
+            line = line.lower()
+            ## Todo: end edit
             assert line == line.lower()
             parts = line.rstrip().split()
             if len(parts) < 2:
