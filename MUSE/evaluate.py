@@ -34,6 +34,9 @@ parser.add_argument("--max_vocab", type=int, default=200000, help="Maximum vocab
 parser.add_argument("--emb_dim", type=int, default=300, help="Embedding dimension")
 parser.add_argument("--normalize_embeddings", type=str, default="", help="Normalize embeddings before training")
 
+# EDIT to test wordsim
+#parser.add_argument("--src_dico", type=str, default="", help="Path to evaluation dictionary")
+#parser.add_argument("--tgt_dico", type=str, default="", help="Path to evaluation dictionary")
 
 # parse parameters
 params = parser.parse_args()
@@ -52,10 +55,11 @@ evaluator = Evaluator(trainer)
 
 # run evaluations
 to_log = OrderedDict({'n_iter': 0})
-evaluator.monolingual_wordsim(to_log)
+#evaluator.monolingual_wordsim(to_log) #enable for eval_3 onward
 # evaluator.monolingual_wordanalogy(to_log)
+
 if params.tgt_lang:
-    evaluator.crosslingual_wordsim(to_log)
+    ##evaluator.crosslingual_wordsim(to_log) #td
     evaluator.word_translation(to_log)
-    evaluator.sent_translation(to_log)
+    ##evaluator.sent_translation(to_log) #td
     # evaluator.dist_mean_cosine(to_log)

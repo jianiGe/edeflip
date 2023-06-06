@@ -55,6 +55,9 @@ def load_dictionary(path, word2id1, word2id2):
 
     with io.open(path, 'r', encoding='utf-8') as f:
         for index, line in enumerate(f):
+            #
+            line = line.lower()
+            #
             assert line == line.lower()
             parts = line.rstrip().split()
             if len(parts) < 2:
@@ -80,6 +83,12 @@ def load_dictionary(path, word2id1, word2id2):
     for i, (word1, word2) in enumerate(pairs):
         dico[i, 0] = word2id1[word1]
         dico[i, 1] = word2id2[word2]
+    
+    # EDIT to export the word pairs acually used for evaluation
+    with open("dico_actual.txt", "w", encoding="utf-8") as file:
+        for item in pairs:
+            file.write(str(item) + "\n")
+    #end edit
 
     return dico
 
@@ -155,4 +164,5 @@ def get_word_translation_accuracy(lang1, word2id1, emb1, lang2, word2id2, emb2, 
                     (len(matching), method, k, precision_at_k))
         results.append(('precision_at_%i' % k, precision_at_k))
 
+    #return results
     return results

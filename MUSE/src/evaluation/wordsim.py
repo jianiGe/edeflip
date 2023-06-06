@@ -12,9 +12,9 @@ import numpy as np
 import torch
 from scipy.stats import spearmanr
 
-
-MONOLINGUAL_EVAL_PATH = 'data/monolingual'
-SEMEVAL17_EVAL_PATH = 'data/crosslingual/wordsim'
+#EDITED
+MONOLINGUAL_EVAL_PATH = 'edeflip/MUSE/data/monolingual'
+SEMEVAL17_EVAL_PATH = 'edeflip/MUSE/data/crosslingual/wordsim'
 
 
 logger = getLogger()
