@@ -1,6 +1,13 @@
 # Edeflip: Supervised Word Translation between English and Yoruba
-## adapted from [MUSE: Multilingual Unsupervised and Supervised Embeddings](https://github.com/facebookresearch/MUSE)
 ## By Ikeoluwa Abioye (Ike.23@dartmouth.edu) and Jiani Ge (Jiani.Ge.23@dartmouth.edu)
+
+## Code
+* main changes to MUSE:
+  - adapted from [MUSE: Multilingual Unsupervised and Supervised Embeddings](https://github.com/facebookresearch/MUSE)
+  - updated deprecated code
+  - removed sentence translation sections as that was not relevant to our project
+* analyzed the impact of various embedding types and normalization on the result
+
 
 ## Get monolingual word embeddings
 For pre-trained monolingual word embeddings, we highly recommend [fastText Wikipedia embeddings](https://fasttext.cc/docs/en/pretrained-vectors.html), or using [fastText](https://github.com/facebookresearch/fastText) to train your own word embeddings from your corpus.
