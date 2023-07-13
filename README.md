@@ -1,5 +1,7 @@
 # Edeflip: Supervised Word Translation between English and Yoruba
 ## By Ikeoluwa Abioye (Ike.23@dartmouth.edu) and Jiani Ge (Jiani.Ge.23@dartmouth.edu)
+In our project, we use embedding alignment to translate words between English and Yoruba, and observe effects of embedding quality and normalization on translation precision. 
+Read about our methodology and findings here: https://github.com/jianiGe/edeflip/blob/main/edeflip_report.pdf
 
 ## Code
 * main changes to MUSE:
